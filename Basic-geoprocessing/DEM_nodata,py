@@ -1,0 +1,11 @@
+import gdal
+import processing
+
+parameters={"INPUT":"C:/Users/Kevin/Desktop/UNALM/SextoCiclo/Geo_physics/Lab_1/Output/DEM_warp_py.tif",
+            "BAND":1,
+            "DISTANCE":10,
+            "ITERATIONS":0,
+            "NO_MASK":False,
+            "OUTPUT":"C:/Users/Kevin/Desktop/UNALM/SextoCiclo/Geo_physics/Lab_1/Output/DEM_nodata_complete.tif"}
+
+processing.run("gdal:fillnodata",parameters)
